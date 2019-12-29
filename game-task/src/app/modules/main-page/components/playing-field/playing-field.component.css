@@ -1,0 +1,35 @@
+.playing-table {
+  width: 450px;
+  height: 450px;
+}
+
+.table-border {
+  border: 1px solid #c0c0c0;
+}
+
+.easyMode {
+  height: 90px;
+  width: 90px;
+}
+
+.normalMode {
+  height: 45px;
+  width: 45px;
+}
+
+.hardMode {
+  height: 30px;
+  width: 30px;
+}
+
+.active-cell {
+  background-color: blue;
+}
+
+.player-won-cell {
+  background-color: green;
+}
+
+.computer-won-cell {
+  background-color: red;
+}

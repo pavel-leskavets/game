@@ -1,0 +1,18 @@
+<div class="container">
+  <div class="row">
+    <div class="col-md-12">
+      <form class="row" [formGroup]="gameModeForm">
+        <div class="col">
+          <p-dropdown [options]="dropDownValues" placeholder="Pick game mode" formControlName="gameMode" optionLabel="name" (onChange)="setGameMode($event.value.id)"></p-dropdown>
+        </div>
+        <div class="col">
+          <input type="text" formControlName="name" />
+        </div>
+        <div class="col">
+          <button class="btn btn-primary" (click)="startGameHandler()">Play</button>
+        </div>
+      </form>
+    </div>
+
+  </div>
+</div>
