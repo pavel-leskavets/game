@@ -1,6 +1,6 @@
 <h4>{{winner}}</h4>
 <table class="table-border playing-table">
   <tr class="table-border" *ngFor="let a of playingFieldArray">
-    <td class="table-border clear-cell" (click)="setColorToActiveCell($event)" [ngClass]="fieldClass" *ngFor="let b of playingFieldArray"></td>
+    <td class="table-border clear-cell" (click)="setColorToActiveCell($event.target.classList)" [ngClass]="fieldClass" *ngFor="let b of playingFieldArray"></td>
   </tr>
 </table>
