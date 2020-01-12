@@ -15,6 +15,7 @@ export class GameSettingsComponent implements OnInit {
   modes = [];
   dropDownValues = [];
   gameModeForm: FormGroup;
+  winnerForm: FormGroup;
 
   constructor(private formBuilder: FormBuilder,
               private gameModeService: GameModeService) {
@@ -22,6 +23,7 @@ export class GameSettingsComponent implements OnInit {
 
   ngOnInit() {
     this.initGameForm();
+    this.initWinnerForm();
     this.getGameModes();
   }
 
@@ -29,6 +31,13 @@ export class GameSettingsComponent implements OnInit {
     this.gameModeForm = this.formBuilder.group({
       gameMode: null,
       name: null
+    })
+  }
+
+  private initWinnerForm() {
+    this.winnerForm = this.formBuilder.group({
+      winner: null,
+      date: null
     })
   }
 

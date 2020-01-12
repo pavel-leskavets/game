@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, Input, OnInit} from '@angular/core';
 
 @Component({
   selector: 'app-leader-board',
@@ -6,6 +6,8 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./leader-board.component.css']
 })
 export class LeaderBoardComponent implements OnInit {
+
+  @Input() leaderList: any;
 
   constructor() { }
 

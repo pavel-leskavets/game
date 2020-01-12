@@ -13,6 +13,7 @@ import {HttpClient, HttpClientModule} from "@angular/common/http";
 import { GameSettingsComponent } from './modules/main-page/components/game-settings/game-settings.component';
 import { PlayingFieldComponent } from './modules/main-page/components/playing-field/playing-field.component';
 import { LeaderBoardComponent } from './modules/main-page/components/leader-board/leader-board.component';
+import {TableModule} from "primeng";
 
 const appRoutes: Routes = [
   {path: '', component: HomePageComponent},
@@ -28,16 +29,17 @@ const appRoutes: Routes = [
     PlayingFieldComponent,
     LeaderBoardComponent
   ],
-  imports: [
-    BrowserModule,
-    AppRoutingModule,
-    HttpClientModule,
-    DropdownModule,
-    FormsModule,
-    BrowserAnimationsModule,
-    RouterModule.forRoot(appRoutes),
-    ReactiveFormsModule
-  ],
+    imports: [
+        BrowserModule,
+        AppRoutingModule,
+        HttpClientModule,
+        DropdownModule,
+        FormsModule,
+        BrowserAnimationsModule,
+        RouterModule.forRoot(appRoutes),
+        ReactiveFormsModule,
+        TableModule
+    ],
   providers: [FormBuilder],
   bootstrap: [AppComponent]
 })

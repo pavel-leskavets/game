@@ -1,4 +1,9 @@
-.container {
-  height: 50%;
-  padding-top: 5%;
+.main-container {
+  width: 90%;
+  height: 80%;
 }
+.playing-field {
+  width: 70%;
+  height: 90%;
+}
+

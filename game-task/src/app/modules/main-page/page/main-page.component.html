@@ -1,11 +1,15 @@
-<div class="container d-flex flex-column justify-content-between align-items-center">
-  <app-game-settings (gameMode)="setGameMode($event)"
-                     (startGame)="startGameHandler()"
-  >
-  </app-game-settings>
-  <app-playing-field ></app-playing-field>
+<div class="main-container d-flex justify-content-between align-items-center">
+  <div class="playing-field d-flex flex-column justify-content-between align-items-center">
+    <app-game-settings (gameMode)="setGameMode($event)"
+                       (startGame)="startGameHandler()"
+    >
+    </app-game-settings>
+    <app-playing-field (setWinner)="updateGameForm($event)"></app-playing-field>
+  </div>
+  <div>
+    <app-leader-board [leaderList]="leadersList"></app-leader-board>
+  </div>
 </div>
-
 
 
 
